@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upang Topography</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <script src="script.js"></script> 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      (function () { emailjs.init("zc6L4yN6CTNfj-yuI"); })();
+    </script>
+
+    <nav class="navbar">
+        <a href="#"> <img src="home_img/UpangLogo.png" width="125px" class="upanglogo"/> </a>
+        <div class="text">
+            <p class="PHINMA">PHINMA</p>
+            <p class="UPANG">University of Pangasinan</p>
+            <p class="MAIN">Main Campus</p>
+        </div>
+        <div class="dropdown-menu">
+            <ul>
+                <li> <a href="homepage.html">Home</a> </li>
+                <li> <a href="discover.html">Discover</a> </li>
+                <li> <a href="about.html">About us</a> </li>
+                <li> <a href="contact.html">Contact</a> </li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!--hanggang dito lang ung nav na icocopy-->  
+    <img src="home_img/MBA.jpeg" alt="" class="contact-background" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 messageus">
+                <h1>Message Us!</h1>
+                <h4>We are here to support you every step of the way on your academic voyage. 
+                    Whether you have inquiries about our programs, admissions process, or simply 
+                    want to connect with us, don't hesitate to get in touch. Our team of friendly 
+                    students is ready to provide you with the information and assistance you need 
+                    to make informed decisions about your education. Reach out to us today, and 
+                    let's embark on this educational adventure together!"</h4>
+            </div>
+  
+            <div class="col-md-5" style="color: #ffffff;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h5 for="firstname">First Name</h5>
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter First Name" required autocomplete="off"/>
+                            <h5 for="email">Email</h5>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" required autocomplete="off"/>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h5 for="lastname">Last Name</h5>
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" required autocomplete="off"/>
+                            <h5 for="phonename">Mobile Number</h5>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" required autocomplete="off"/>
+                        </div>
+                   </div>
+                </div>
+                
+                <div class="form-group">
+                    <h5 for="message">Feedback</h5>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter Feedback" autocomplete="off"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="contact-content">
+            <div class="touch">GET IN TOUCH</div>
+
+            <div class="contact-icon">
+
+                <div class="facebook-icon">
+                    <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>
+                    <p>FACEBOOK</p>
+                    <div class="desc-title">
+                        <p><span>Main Facebook</span>
+                            <br>facebook.com/phinmaupang
+                            <br>facebook.com/up.csdl
+                        <br><span>Senior High School</span>
+                            <br>facebook.com/PHINMAUPangSHSSC
+                        <br><span>College of Arts and Sciences</span>
+                            <br>facebook.com/phinmaupangcassc
+                        <br><span>College of Management and Accountancy</span>
+                            <br>facebook.com/PHINMAUPANG.CMAStudentCouncil
+                        <br><span>College of Engineering and Architecture</span>
+                            <br>facebook.com/PHINMAUPangCEASC
+                        <br><span>College of Information and Technology Education</span>
+                            <br>facebook.com/phinma.up.citesc
+                        <br><span>College of Allied Health and Sciences</span>
+                            <br>facebook.com/chssc.upang
+                        <br><span>College of Education and Liberal Arts</span>
+                            <br>facebook.com/upangcelasc
+                        <br><span>College of Criminal Justice Education</span>
+                            <br>facebook.com/phinmaupangtactical
+                        </p>
+                    </div>
+                </div>
+
+                <div class="phone-icon">
+                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                    <p>PHONE</p>
+                    <div class="desc-title">
+                        <p><span>Main Contact</span>
+                            <br>+63 995-078-5660
+                            <br>(075) 522-5635
+                            <br>(075) 522-2496
+                        <br><span>Senior High School</span>
+                            <br>+63 906-022-2194
+                        <br><span>College of Arts and Sciences</span>
+                            <br>+63 907-851-1965
+                        <br><span>College of Management and Accountancy</span>
+                            <br>N/A
+                        <br><span>College of Engineering and Architecture</span>
+                            <br>N/A
+                        <br><span>College of Information and Technology Education</span>
+                            <br>+63 947-693-3067
+                        <br><span>College of Allied Health and Sciences</span>
+                            <br>N/A
+                        <br><span>College of Education and Liberal Arts</span>
+                            <br>+63 995-537-6591
+                        <br><span>College of Criminal Justice Education</span>
+                            <br>+63 923-642-9359
+                        </p>
+                    </div>
+                </div>
+
+                <div class="email-icon">
+                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                    <p>EMAIL</p>
+                    <div class="desc-title">
+                        <p><span>Main Email</span>
+                            <br>info.up@phinmaed.com
+                            <br>pedro.up@phinmaed.com
+                        <br><span>Senior High School</span>
+                            <br>hs-sc@up.phinmaed.com
+                        <br><span>College of Arts and Sciences</span>
+                            <br>cas-sc@up.phinmaed.com
+                        <br><span>College of Management and Accountancy</span>
+                            <br>cma-sc@up.phinmaed.com
+                        <br><span>College of Engineering and Architecture</span>
+                            <br>cea-sc@up.phinmaed.com
+                        <br><span>College of Information and Technology Education</span>
+                            <br>cite-sc@up.phinmaed.com
+                        <br><span>College of Allied Health and Sciences</span>
+                            <br>chs-sc@up.phinmaed.com
+                        <br><span>College of Education and Liberal Arts</span>
+                            <br>css-sc@up.phinmaed.com
+                        <br><span>College of Criminal Justice Education</span>
+                            <br>ccjesc23@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+</body>
+
+</html>
+
+
