@@ -205,7 +205,7 @@ a {
 }
 
 .contact-icon i {
-    margin: 0 12rem;
+    margin: 0 14rem;
     background-color: rgba(0, 128, 0, 0.2);
     font-size: 36px;
     border-radius: 50px;
@@ -246,7 +246,7 @@ a {
 .contact-icon p {
     margin-top: 12px;
     display: block;
-    font-size: 18px;
+    font-size: 24px;
     color: #ffffff;
     text-align: center;
     font-weight: 600;
@@ -254,11 +254,11 @@ a {
 
 .desc-title span {
     font-weight: 800;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .desc-title p {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 200;
 }
 
@@ -300,6 +300,7 @@ a {
 
 .container {
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .container .row {

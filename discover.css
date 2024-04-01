@@ -178,14 +178,14 @@ a {
 .carousel .list .item .content{
     position: absolute;
     top: 5%;
-    max-width: 45%;
-    height: 450px; /*di paq shor*/
+    max-width: 50%;
+    height: 350px; /*di paq shor*/
     left: 5%;
     transform: translateX(-5%);
     box-sizing: border-box;
     color: #fff;
     box-shadow: 10px 10px 10px 0px #000;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.75); 
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -211,8 +211,8 @@ a {
 /* thumbail */
 .thumbnail{
     position: absolute;
-    bottom: 5px;
-    left: 50%;
+    bottom: 20px;
+    left: 55%;
     width: max-content;
     z-index: 100;
     gap: 20px;
@@ -247,7 +247,7 @@ a {
 
 .thumbnail .item .content .title{
     font-weight: 600;
-    font-size: 10px;
+    font-size: 12px;
     align-items: center;
     text-align: center;
 }
@@ -278,25 +278,26 @@ a {
 .arrows{
     position: absolute;
     top: 80%;
-    right: 52%;
+    right: 50%;
     z-index: 100;
-    width: 300px;
+    width: 500px;
     max-width: 30%;
     display: flex;
-    gap: 10px;
+    gap: 50px;
     align-items: center;
 }
 
 .arrows button{
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(0, 0, 0, 0.267);
     border: none;
     color: #fff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
+    font-size: 25px;
 }
 
 .arrows button:hover{
@@ -307,6 +308,11 @@ a {
 /* animation */
 .carousel .list .item:nth-child(1){
     z-index: 1;
+}
+
+.carousel .list .content .des {
+    font-size: 18px;
+
 }
 
 /* animation text in first item */
