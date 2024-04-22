@@ -160,13 +160,18 @@ a {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     margin: 0;
     object-fit: cover; /* Ensure the image covers the entire container */
     z-index: -1;
     filter: blur(1px);
 }
 
+@media (max-width: 768px) {
+    .contact-background {
+        height: 350vh;
+    }
+}
 
 .contact-content {
     width: 85%;
