@@ -47,11 +47,24 @@ const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 
-const Runningtime = 3000;
+// const Runningtime = 3000;
 const timeAutoNext = 20000;
 
-nextDom.addEventListener('click', () => showSlider('next'));
-prevDom.addEventListener('click', () => showSlider('prev'));
+let isAnimating = false; // Flag to track if animation is running
+
+nextDom.addEventListener('click', () => {
+    if (!isAnimating) { // Check if animation is not running
+        isAnimating = true; // Set flag to true to indicate animation start
+        showSlider('next');
+    }
+});
+
+prevDom.addEventListener('click', () => {
+    if (!isAnimating) { // Check if animation is not running
+        isAnimating = true; // Set flag to true to indicate animation start
+        showSlider('prev');
+    }
+});
 
 let runTimeOut;
 let runNextAuto = setTimeout(() => {
@@ -71,14 +84,12 @@ function showSlider(type) {
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
         carouselDom.classList.add('prev');
     }
-    clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
+    
+    // Set timeout to reset animation flag after animation duration
+    setTimeout(() => {
         carouselDom.classList.remove('next');
         carouselDom.classList.remove('prev');
-    }, Runningtime);
-
-    clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-        next.click();
-    }, timeAutoNext);
+        isAnimating = false; // Reset flag to indicate animation end
+    })
+    // }, Runningtime);
 }
