@@ -321,7 +321,7 @@ a {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .5s 1s linear 1 forwards;
+    animation: showContent 1s 1s linear 1 forwards;
 }
 
 @keyframes showContent {
@@ -332,11 +332,11 @@ a {
     }
 }
 .carousel .list .item:nth-child(1) .content .title {
-    animation-delay: 1.2s;
+    animation-delay: 1.5s;
 }
 
 .carousel .list .item:nth-child(1) .content .des {
-    animation-delay: 1.6s;
+    animation-delay: 1.5s;
 }
 
 /* create animation when next click */
@@ -347,7 +347,7 @@ a {
     bottom: 50px;
     left: 50%;
     border-radius: 30px;
-    animation: showImage .5s linear 1 forwards;
+    animation: showImage 1.5s 1s linear 1 forwards;
 }
 
 @keyframes showImage{
@@ -362,7 +362,7 @@ a {
 
 .carousel.next .thumbnail .item:nth-last-child(1) {
     overflow: hidden;
-    animation: showThumbnail .5s linear 1 forwards;
+    animation: showThumbnail 1.5s linear 1 forwards;
 }
 
 .carousel.prev .list .item img {
@@ -376,7 +376,7 @@ a {
 }
 
 .carousel.next .thumbnail {
-    animation: effectNext .5s linear 1 forwards;
+    animation: effectNext 1.5s linear 1 forwards;
 }
 
 @keyframes effectNext {
@@ -385,35 +385,13 @@ a {
     }
 }
 
-/* running time */
-/* .carousel .time {
-    position: absolute;
-    z-index: 1000;
-    width: 0%;
-    height: 3px;
-    background-color: #f1683a;
-    left: 0;
-    top: 0;
-}
-
-.carousel.next .time,
-.carousel.prev .time {
-    animation: runningTime 3s linear 1 forwards;
-}
-
-@keyframes runningTime{
-    from{ width: 100%}
-    to{width: 0}
-} */
-
-
 /* prev click */
 .carousel.prev .list .item:nth-child(2){
     z-index: 2;
 }
 
 .carousel.prev .list .item:nth-child(2) img{
-    animation: outFrame 0.5s linear 1 forwards;
+    animation: outFrame 1.5s linear 1 forwards;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -432,7 +410,7 @@ a {
 .carousel.prev .thumbnail .item:nth-child(1){
     overflow: hidden;
     opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards;
+    animation: showThumbnail 1.5s linear 1 forwards;
 }
 .carousel.next .arrows button,
 .carousel.prev .arrows button{
@@ -444,7 +422,7 @@ a {
 .carousel.prev .list .item:nth-child(2) .content .des,
 .carousel.prev .list .item:nth-child(2) .content .buttons
 {
-    animation: contentOut 1.5s linear 1 forwards!important;
+    animation: contentOut 5s linear 1 forwards!important;
 }
 
 @keyframes contentOut{

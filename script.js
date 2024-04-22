@@ -37,51 +37,48 @@ function sendMail() {
 
 /* discover js */
 
-let nextDom = document.getElementById('next');
-let prevDom = document.getElementById('prev');
-let carouselDom = document.querySelector('.carousel');
-let sliderDom = carouselDom.querySelector('.carousel .list');
-let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
-let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+const nextDom = document.getElementById('next');
+const prevDom = document.getElementById('prev');
 
-// Initial setup
+const carouselDom = document.querySelector('.carousel');
+const SliderDom = carouselDom.querySelector('.carousel .list');
+const thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let runningTime = 3000;
-let timeAutoNext = 20000;
-let runTimeout;
-let runNextAuto;
 
-// Click event handlers
-nextDom.onclick = function() {
-    showSlider('next');
-};
+const Runningtime = 3000;
+const timeAutoNext = 20000;
 
-prevDom.onclick = function() {
-    showSlider('prev');
-};
+nextDom.addEventListener('click', () => showSlider('next'));
+prevDom.addEventListener('click', () => showSlider('prev'));
 
-// Function to show slider
+let runTimeOut;
+let runNextAuto = setTimeout(() => {
+    next.click();
+}, timeAutoNext);
+
 function showSlider(type) {
-    let sliderItemsDom = sliderDom.querySelectorAll('.carousel .list .item');
+    const SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+    const thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
 
     if (type === 'next') {
-        sliderDom.appendChild(sliderItemsDom[0]);
+        SliderDom.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
         carouselDom.classList.add('next');
     } else {
-        sliderDom.prepend(sliderItemsDom[sliderItemsDom.length - 1]);
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
         carouselDom.classList.add('prev');
     }
-
-    clearTimeout(runTimeout);
-    runTimeout = setTimeout(() => {
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
         carouselDom.classList.remove('next');
         carouselDom.classList.remove('prev');
-    }, runningTime);
+    }, Runningtime);
 
     clearTimeout(runNextAuto);
     runNextAuto = setTimeout(() => {
-        nextDom.click();
+        next.click();
     }, timeAutoNext);
 }
