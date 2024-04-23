@@ -70,17 +70,11 @@ function showSlider(type) {
     if (type === 'next') {
         SliderDom.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-        carouselDom.classList.add('next');
     } else {
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
-        carouselDom.classList.add('prev');
     }
     
-    // Set timeout to reset animation flag after animation duration
-    setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
-        isAnimating = false; // Reset flag to indicate animation end
-    });
+    // Reset animation flag
+    isAnimating = false;
 }
