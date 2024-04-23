@@ -47,7 +47,6 @@ const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 
-// const Runningtime = 3000;
 const timeAutoNext = 20000;
 
 let isAnimating = false; // Flag to track if animation is running
@@ -60,8 +59,8 @@ nextDom.addEventListener('click', () => {
 });
 
 prevDom.addEventListener('click', () => {
-    if (!isAnimating) { // Check if animation is not running
-        isAnimating = true; // Set flag to true to indicate animation start
+    if (!isAnimating) { 
+        isAnimating = true; 
         showSlider('prev');
     }
 });
@@ -91,5 +90,5 @@ function showSlider(type) {
         carouselDom.classList.remove('prev');
         isAnimating = false; // Reset flag to indicate animation end
     })
-    // }, Runningtime);
+
 }
